@@ -5,7 +5,7 @@ from .models import Movie, Actor
 class ActorSerializer(ModelSerializer):
     class Meta:
         model = Actor
-        fields = ('id', 'name', 'genre', 'age', 'oscars')
+        fields = ('id', 'name', 'sex', 'age', 'oscars')
 
 
 class MovieSerializer(ModelSerializer):
