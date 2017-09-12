@@ -1,0 +1,4 @@
+Django==1.11.4
+djangorestframework==3.6.3
+django-rest-swagger==2.1.2
+drf-swagger-customization==0.1.5

@@ -1,0 +1,490 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Pastebin API",
+    "description": "",
+    "version": ""
+  },
+  "host": "127.0.0.1:8000",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/actors/": {
+      "get": {
+        "operationId": "actors_list",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "tags": [
+          "actors"
+        ]
+      },
+      "post": {
+        "operationId": "actors_create",
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "",
+                  "type": "string"
+                },
+                "genre": {
+                  "description": "",
+                  "type": "string"
+                },
+                "age": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "oscars": {
+                  "description": "",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "genre",
+                "age",
+                "oscars"
+              ]
+            }
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "consumes": [
+          "application/json"
+        ],
+        "tags": [
+          "actors"
+        ]
+      }
+    },
+    "/actors/{id}/": {
+      "get": {
+        "operationId": "actors_read",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this actor.",
+            "type": "integer"
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "tags": [
+          "actors"
+        ]
+      },
+      "put": {
+        "operationId": "actors_update",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this actor.",
+            "type": "integer"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "",
+                  "type": "string"
+                },
+                "genre": {
+                  "description": "",
+                  "type": "string"
+                },
+                "age": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "oscars": {
+                  "description": "",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "genre",
+                "age",
+                "oscars"
+              ]
+            }
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "consumes": [
+          "application/json"
+        ],
+        "tags": [
+          "actors"
+        ]
+      },
+      "patch": {
+        "operationId": "actors_partial_update",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this actor.",
+            "type": "integer"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "",
+                  "type": "string"
+                },
+                "genre": {
+                  "description": "",
+                  "type": "string"
+                },
+                "age": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "oscars": {
+                  "description": "",
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "consumes": [
+          "application/json"
+        ],
+        "tags": [
+          "actors"
+        ]
+      },
+      "delete": {
+        "operationId": "actors_delete",
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this actor.",
+            "type": "integer"
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "tags": [
+          "actors"
+        ]
+      }
+    },
+    "/movies/": {
+      "get": {
+        "operationId": "movies_list",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "tags": [
+          "movies"
+        ]
+      },
+      "post": {
+        "operationId": "movies_create",
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "data",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "description": "",
+                  "type": "string"
+                },
+                "description": {
+                  "description": "",
+                  "type": "string"
+                },
+                "genre": {
+                  "description": "",
+                  "type": "string"
+                },
+                "year": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "oscars": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "cast": {
+                  "description": "",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "genre",
+                "year",
+                "oscars",
+                "cast"
+              ]
+            }
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "consumes": [
+          "application/json"
+        ],
+        "tags": [
+          "movies"
+        ]
+      }
+    },
+    "/movies/{id}/": {
+      "get": {
+        "operationId": "movies_read",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this movie.",
+            "type": "integer"
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "tags": [
+          "movies"
+        ]
+      },
+      "put": {
+        "operationId": "movies_update",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this movie.",
+            "type": "integer"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "description": "",
+                  "type": "string"
+                },
+                "description": {
+                  "description": "",
+                  "type": "string"
+                },
+                "genre": {
+                  "description": "",
+                  "type": "string"
+                },
+                "year": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "oscars": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "cast": {
+                  "description": "",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "title",
+                "description",
+                "genre",
+                "year",
+                "oscars",
+                "cast"
+              ]
+            }
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "consumes": [
+          "application/json"
+        ],
+        "tags": [
+          "movies"
+        ]
+      },
+      "patch": {
+        "operationId": "movies_partial_update",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this movie.",
+            "type": "integer"
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "description": "",
+                  "type": "string"
+                },
+                "description": {
+                  "description": "",
+                  "type": "string"
+                },
+                "genre": {
+                  "description": "",
+                  "type": "string"
+                },
+                "year": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "oscars": {
+                  "description": "",
+                  "type": "integer"
+                },
+                "cast": {
+                  "description": "",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "consumes": [
+          "application/json"
+        ],
+        "tags": [
+          "movies"
+        ]
+      },
+      "delete": {
+        "operationId": "movies_delete",
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "A unique integer value identifying this movie.",
+            "type": "integer"
+          }
+        ],
+        "description": "A simple ViewSet for viewing and editing accounts.",
+        "summary": "A simple ViewSet for viewing and editing accounts.",
+        "tags": [
+          "movies"
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "basic": {
+      "type": "basic"
+    }
+  }
+}

@@ -1,0 +1,491 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "My Music API",
+        "description": "",
+        "version": ""
+    },
+    "host": "127.0.0.1:8000",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/singer/": {
+            "get": {
+                "operationId": "singers_list",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "tags": [
+                    "singers"
+                ]
+            },
+            "post": {
+                "operationId": "singer_create",
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "genre": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "age": {
+                                    "description": "",
+                                    "type": "integer"
+                                },
+                                "gramies": {
+                                    "description": "",
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "genre",
+                                "age",
+                                "gramies"
+                            ]
+                        }
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "singers"
+                ]
+            }
+        },
+        "/singer/{id}/": {
+            "get": {
+                "operationId": "singer_read",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this singer.",
+                        "type": "integer"
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "tags": [
+                    "singers"
+                ]
+            },
+            "put": {
+                "operationId": "singer_update",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this singer.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "genre": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "age": {
+                                    "description": "",
+                                    "type": "integer"
+                                },
+                                "gramis": {
+                                    "description": "",
+                                    "type": "integer"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "genre",
+                                "age",
+                                "gramies"
+                            ]
+                        }
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "singers"
+                ]
+            },
+            "patch": {
+                "operationId": "singers_partial_update",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this singer.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "genre": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "age": {
+                                    "description": "",
+                                    "type": "integer"
+                                },
+                                "gramies": {
+                                    "description": "",
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "singers"
+                ]
+            },
+            "delete": {
+                "operationId": "singers_delete",
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this singer.",
+                        "type": "integer"
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "tags": [
+                    "singers"
+                ]
+            }
+        },
+        "/song/": {
+            "get": {
+                "operationId": "songs_list",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "tags": [
+                    "songs"
+                ]
+            },
+            "post": {
+                "operationId": "songs_create",
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "genre": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "year": {
+                                    "description": "",
+                                    "type": "integer"
+                                },
+                                "singer": {
+                                    "description": "",
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "title",
+                                "description",
+                                "genre",
+                                "year",
+                                "singer"
+                            ]
+                        }
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "songs"
+                ]
+            }
+        },
+        "/song/{id}/": {
+            "get": {
+                "operationId": "songs_read",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this song.",
+                        "type": "integer"
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "tags": [
+                    "songs"
+                ]
+            },
+            "put": {
+                "operationId": "songs_update",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this song.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "genre": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "year": {
+                                    "description": "",
+                                    "type": "integer"
+                                },
+                                "singer": {
+                                    "description": "",
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "title",
+                                "description",
+                                "genre",
+                                "year",
+                                "singer"
+                            ]
+                        }
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "songs"
+                ]
+            },
+            "patch": {
+                "operationId": "songs_partial_update",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this song.",
+                        "type": "integer"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "genre": {
+                                    "description": "",
+                                    "type": "string"
+                                },
+                                "year": {
+                                    "description": "",
+                                    "type": "integer"
+                                },
+                                "singer": {
+                                    "description": "",
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "songs"
+                ]
+            },
+            "delete": {
+                "operationId": "songs_delete",
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "required": true,
+                        "in": "path",
+                        "description": "A unique integer value identifying this song.",
+                        "type": "integer"
+                    }
+                ],
+                "description": "A simple ViewSet for viewing and editing accounts.",
+                "summary": "A simple ViewSet for viewing and editing accounts.",
+                "tags": [
+                    "songs"
+                ]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "basic": {
+            "type": "basic"
+        }
+    }
+}
