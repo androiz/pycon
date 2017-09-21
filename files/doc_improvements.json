@@ -5,11 +5,15 @@
             "paths|/movies/|post|parameters|name=data|schema|properties|cast|items": {
                 "type": "object",
                 "properties": {
-                    "id": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "age": {
                         "description": "",
                         "type": "integer"
                     },
-                    "name": {
+                    "country": {
                         "description": "",
                         "type": "string"
                     },
