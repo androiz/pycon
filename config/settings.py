@@ -105,5 +105,5 @@ STATIC_URL = '/static/'
 
 # Django Swagger Customization
 
-EXTENSION_PATH = os.path.join(BASE_DIR, 'docs/doc_extension.json')  # Path to your extension file
-EXTERNAL_DOC_FOLDER = os.path.join(BASE_DIR, 'docs/external/')  # Path to your external documentation folder
+EXTENSION_PATH = os.path.join(BASE_DIR, 'documentation/doc_extension.json')  # Path to your extension file
+EXTERNAL_DOC_FOLDER = os.path.join(BASE_DIR, 'documentation/external/')  # Path to your external documentation folder
