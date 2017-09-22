@@ -1,4 +1,4 @@
-# Instalation
+# Installing
 
 ```sh
 git clone https://github.com/androiz/drf-swagger-customization.git
@@ -8,3 +8,6 @@ cd pycon
 pip install -r requirements.txt
 python manage.py runserver
 ```
+
+
+Link to (ppts)[./docs]
