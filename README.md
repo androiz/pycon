@@ -10,4 +10,4 @@ python manage.py runserver
 ```
 
 
-Link to (ppts)[./docs]
+Link to [ppts](./docs)
